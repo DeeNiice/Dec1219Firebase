@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application_Dec1219_Firebase</string>
+
+    <string-array name = "sections">
+        <item>4ITA</item>
+        <item>4ITB</item>
+    </string-array>
+</resources>
