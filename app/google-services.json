@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "31849697776",
-    "firebase_url": "https://my-applicationdec1219fir-a8734.firebaseio.com",
-    "project_id": "my-applicationdec1219fir-a8734",
-    "storage_bucket": "my-applicationdec1219fir-a8734.appspot.com"
+    "project_number": "288890943627",
+    "firebase_url": "https://my-applicationdec1219fir-f1ed8.firebaseio.com",
+    "project_id": "my-applicationdec1219fir-f1ed8",
+    "storage_bucket": "my-applicationdec1219fir-f1ed8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:31849697776:android:729e6b0aaa0925c05e0d35",
+        "mobilesdk_app_id": "1:288890943627:android:d757ef6324122d5a433c8e",
         "android_client_info": {
           "package_name": "com.example.myapplication_dec1219_firebase"
         }
       },
       "oauth_client": [
         {
-          "client_id": "31849697776-v5q8ik9uack7jcidbdos3mdp1lk8pmim.apps.googleusercontent.com",
+          "client_id": "288890943627-0u8qid67frodvcitit0iv891rgp6isfk.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.myapplication_dec1219_firebase",
-            "certificate_hash": "33598bce6797bf172a313aa4b1e93ac815d59661"
+            "certificate_hash": "6dadbc4ca91228f6bc2ee8994b7f246ac04985a2"
           }
         },
         {
-          "client_id": "31849697776-9m8hvl71kiudhsi7qjqoc06o6vbdf18b.apps.googleusercontent.com",
+          "client_id": "288890943627-k9mltit88rei8io21pu9tkl14nlk3or4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC7QOgVNYM6filp6VSW7OoIK65tCzWd-Ss"
+          "current_key": "AIzaSyAG4Y6nZBYBlZyeaBsvokv5XVeBcFTyHB4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "31849697776-9m8hvl71kiudhsi7qjqoc06o6vbdf18b.apps.googleusercontent.com",
+              "client_id": "288890943627-k9mltit88rei8io21pu9tkl14nlk3or4.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

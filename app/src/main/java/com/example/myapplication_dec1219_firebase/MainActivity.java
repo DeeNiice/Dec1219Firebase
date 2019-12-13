@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -22,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference androidRef;
 
     EditText etId, etCode, etDate, etApi;
-    List<AndroidVersion> list;
-    int i; // ANO TOH
+    ArrayList<AndroidVersion> list;
+    int i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +39,13 @@ public class MainActivity extends AppCompatActivity {
          etCode = findViewById(R.id.et2);
          etDate = findViewById(R.id.et3);
          etApi = findViewById(R.id.et4);
+
          list = new ArrayList<AndroidVersion>();
 
 
     }
 
-    public void addRecord(View v){
+     public void addRecord(View v){
        String id= androidRef.push().getKey();
         String cname= etCode.getText().toString();
         String date= etDate.getText().toString();
@@ -61,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         androidRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot ds) {
-                for(DataSnapshot androidObj: ds.getChildren() ){
+                for(DataSnapshot androidObj:ds.getChildren() ){
                     AndroidVersion av = androidObj.getValue(AndroidVersion.class);
                     list.add(av);
                 }
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void moveFirst(View v){
+     public void moveFirst(View v){
         //AndroidVersion firstObj = list.get(0);
         etId.setText(list.get(0).getId());
         etCode.setText(list.get(0).getcName());
@@ -85,11 +87,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void movePrevious(View v){
-        etId.setText(list.get(--i).getcName());
+
+        etId.setText(list.get(--i).getId());
+        etCode.setText(list.get(--i).getcName());
+        etDate.setText(list.get(--i).getrDate());
+        etApi.setText(list.get(--i).getApiLevel());
     }
 
     public void moveNext(View v){
-        etId.setText(list.get(i).getcName());
+        etId.setText(list.get(++i).getId());
+        etCode.setText(list.get(++i).getcName());
+        etDate.setText(list.get(++i).getrDate());
+        etApi.setText(list.get(++i).getApiLevel());
     }
 
     public void editRecord(View v){
